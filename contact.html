@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+contact.html
+Louis-Charles Boulet-Lavoie
+Dernière modification : 11-12-2020
+-->
+
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>TBL Canadian eSports Organisation </title>
+
+
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+
+    <script src="js/validation.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Teko&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Press+Start+2P&family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="">
+          </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mx-auto paratexte">
+          <a class="nav-item nav-link"  href="index.html">Accueil
+          <a class="nav-item nav-link"  href="histoire.html">Histoire</a>
+          <a class="nav-item nav-link"  href="equipe.html">Notre équipe</a>
+          <a class="nav-item nav-link"  href="etablissement.html">Établissement</a>
+          <a class="nav-item nav-link active"  href="contact.html">Contact<span class="sr-only">(current)</span></a>
+
+        </div>
+
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center" id="pageTexte">
+      <h2 class="contenu1">
+      Contactez-nous
+      </h2>
+    </div>
+    <div class="col-md-12 text-center contenu4" id="pageTexte">
+      <p>Envoyez-nous vos informations pour devenir un membre TBL.</p>
+    </div>
+
+      <img class="center" src="gamepad.svg">
+
+  </div>
+</div>
+<hr class="new1">
+<div class="wrapper">
+<div class="col-12" id="error_message"></div>
+<form name="monFormulaire" onsubmit="return validation()" method="post">
+<div class="container-fluid contenu4">
+   <div class="row">
+     <div class="col-lg-2 offset-lg-3">
+       <p>Identification &nbsp; *</p>
+     </div>
+     <div class="input_field col-md-2">
+       <label for="nom" class="col-form-label">Prénom</label>
+       <input type="text" name="prenom" size="15" minlength="2">
+     </div>
+     <div class="form-group col-md-2">
+       <label for="nom" class="col-form-label">Nom</label>
+       <input type="text" id="nom" size="15" minlength="2">
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-lg-2 offset-lg-3">
+       <p>Date de naissance &nbsp; <span class="rouge">*</span></p>
+     </div>
+     <div class="form-group col-md-2">
+        <input type="date" id="ddn" size="49"  min="4" max="30">
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-lg-2 offset-lg-3">
+       <p>Numéro de <br>téléphone <span class="rouge">*</span></p>
+     </div>
+     <div class="form-group col-md-2">
+        <input type="tel" id="codereg" name="phone"
+       pattern="[0-9]{3}"
+       required>
+        <label for="codereg"  class="col-sm-12 col-form-label">Code régional</label>
+     </div>
+     <div class="form-group col-md-2">
+        <input type="tel" id="numtel" name="phone"
+       pattern="[0-9]{3}-[0-9]{4}"
+       required>
+       <label for="numtel" class="col-sm-12 col-form-label">Numéro de téléphone</label>
+       <p id="demo"></p>
+     </div>
+   </div>
+   <div class="row">
+     <div class="form-group col-lg-2 offset-lg-3">
+        <p>E-mail<span class="rouge">*</span></p>
+     </div>
+     <div class="form-group col-md-2">
+        <input type="email" id="email" size="50" placeholder="ex: my name@exemple.com" min="2" max="40">
+     </div>
+   </div>
+   <div class="row">
+     <div class="form-group col-lg-2 offset-lg-3">
+        <p>Jeux <span class="rouge">*</span></p>
+     </div>
+     <div class="form-group col-md-2">
+        <select style="width:290px" id="sexe" >
+          <option value=""></option>
+          <option value="warzone">Warzone</option>
+          <option value="lol">League of legends</option>
+          <option value="csgo">CS:GO</option>
+          <option value="ow">Overwatch</option>
+        </select>
+     </div>
+   </div>
+   <div class="row">
+     <div class="form-group col-lg-2 offset-lg-3">
+       <p>Présentation <span class="rouge">*</span></p>
+     </div>
+     <div class="form-group col-md-2">
+       <input style="height:125px" type="text" id="presentation" min="2" max="300" size="50" minlength="20">
+     </div>
+   </div>
+   <div class="row">
+     <div class="form-group col-lg-2 offset-lg-3">
+        <p></p>
+     </div>
+     <div class="btn col-12">
+       <input  type="submit" value="Soumettre ma candidature">
+     </div>
+   </div>
+
+</div>
+</div>
+</form>
+<footer class="page-footer font-small">
+  <div class="container">
+        <div class="text-center center-block">
+              <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+	            <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+	            <a href="https://youtube.com"><i id="social-yt" class="fa fa-youtube-square fa-2x social"></i></a>
+	            <a href="https://instagram.com"><i id="social-ig" class="fab fa-instagram-square fa-2x social"></i></a>
+         </div>
+   <hr>
+   <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        TBL eSports
+   </div>
+</footer>
+
+
+<script src="js/js.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script>
+<script src="bootstrap-4.1.3-dist/js/bootstrap.js"></script>
+</body>
+</html>
